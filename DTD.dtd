@@ -1,0 +1,35 @@
+<!-- Fecha partido-->
+<!ELEMENT fecha (#PCDATA)>
+
+<!-- Equipo 1-->
+<!ELEMENT equipo1 (equipo, marcador)>
+
+<!-- Equipo 2-->
+<!ELEMENT equipo2 (equipo, marcador)>
+
+
+<!ELEMENT equipo EMPTY>
+<!ATTLIST equipo
+        local  (si|no) #REQUIRED
+        ganador (si|no|empate) #IMPLIED
+        nombre CDATA #REQUIRED
+        >
+
+<!-- Marcador final-->
+<!ELEMENT marcador (#PCDATA)>
+
+<!ELEMENT jugador (#PCDATA)>
+<!ATTLIST jugador
+        nombre CDATA #REQUIRED
+        numero CDATA #REQUIRED
+        >
+
+<!-- Jugadores que anotaron y el minuto-->
+<!ELEMENT anotar (anotarInfo, jugador)*>
+<!ATTLIST anotarInfo
+        minuto CDATA #REQUIRED
+        equipo CDATA #REQUIRED
+        >
+<!ELEMENT anotarInfo EMPTY>
+
+<!ELEMENT partido (fecha, equipo1, equipo2, anotar*)>
