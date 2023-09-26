@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE partido SYSTEM "DTD.dtd">
+<partido>
+    <fecha>24-09-2023</fecha>
+
+    <equipo1>
+        <equipo local="si" ganador="empate" nombre="Toluca"/>
+        <marcador>1</marcador>
+    </equipo1>
+
+    <equipo2>
+        <equipo local="no" ganador="empate" nombre="América"/>
+        <marcador>1</marcador>
+    </equipo2>
+
+    <anotar>
+        <anotarInfo minuto="25" equipo="América"/>
+        <jugador nombre="Diego Valdés" numero="10"/>
+    </anotar>
+    <anotar>
+        <anotarInfo minuto="54" equipo="Toluca"/>
+        <jugador nombre="Maximiliano Araujo" numero="11"/>
+    </anotar>
+
+</partido>
